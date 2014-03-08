@@ -1,5 +1,5 @@
 <?php
-// FILE: xtemplate.class (part of MiniMediaChat, http://aleph3d.com:8082/repos/MiniMediaChat)
+// FILE: xtemplate.class (part of MiniMediaEducation, https://github.com/aleph3d/MiniMediaEducation.git)
 // TYPE: funciton/class Library (PHP5)
 // LICENSE: BSD and LGPL
 ////// Copyright (c) 2000-2001 Barnab�s Debreceni [cranx@users.sourceforge.net] XTemplate

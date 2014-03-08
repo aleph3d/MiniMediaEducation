@@ -1,4 +1,8 @@
 <?php
+// FILE: dbLIB (part of MiniMediaEducation,
+// https://github.com/aleph3d/MiniMediaEducation.git)
+// TYPE: A function Library (PHP5)
+// LICENSE: MIT (Copyright 2014 Hannah Dunitz)
 function encodeDataSafe($data) {
 	$out = urlencode(htmlentities($data, ENT_QUOTES));
 	return $out;
@@ -13,6 +17,9 @@ function myQuery($query) {
 	return $out;
 }
 class DBclass {
+	var $out;
+	var $xc;
+	
 	public function simpleQuery($query) {
 		$db = new mysqli(dbhost, dbuser, dbpass, dbname);
 		$explode = explode("'",$query);
@@ -32,7 +39,7 @@ class DBclass {
 		if(($db->connect_errno > 0)){
 			return FALSE;
 		}
-		$outarray['rows'] = $db->mysqli_rows($result);
+		$temp['rows'] = $db->mysqli_rows($result);
 		$x = 0;
 		if($outarray['rows'] > 0) {
 			while ($x < $outarray['rows']) {
@@ -47,6 +54,20 @@ class DBclass {
 		}
 		$db->free();
 		$db->close();
-		return $out;
+		
+	}
+	
+	public function result() {
+		$xc = 0;
+		if(isset($out['rowdata'][$xc])) {
+		$xo = $xc;
+		$xc++;
+		return $outarray['rowdata'][$xo];
+		}
+		
+	}
+	
+	public function rows() {
+		return $out['rows'];
 	}
 }

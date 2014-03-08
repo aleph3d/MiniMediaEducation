@@ -3,4 +3,4 @@
 
 // FILE NOTE - no closing php tag should be needed on this page.
 
-define('langSiteName','Aleph3D Project');
+define('langSiteName','MiniMediaEducation');
