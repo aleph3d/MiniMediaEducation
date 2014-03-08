@@ -13,3 +13,5 @@ define("pathPrivate","/home/hannah/drive/MiniMediaEducation-ps/");
 define("pathHTTPdocs","/home/hannah/drive/public_html/");
 // DefaultLanguage
 define("defLang","english_US");
+// DefaultTimezone
+define("deftimezone","GMT");
